@@ -1,21 +1,22 @@
 # Edu's Show — Portfolio
 
-Portefólio inspirado no estilo Netflix, desenvolvido com **HTML, CSS e JS**.
+A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScript**.
 
-## 🚀 Primeira fase
-- Criada secção Hero com título, subtítulo e botões de ação
-- Tema escuro, semelhante ao UI da Netflix
-- Estrutura de pastas inicial
+## 🚀 Current Status
+- Checkpoint 1: Hero section with title, subtitle, and CTA buttons
+- Checkpoint 2: Added horizontal rows of project cards
 
-## 📂 Estrutura
-- `index.html`: página principal
-- `style.css`: estilos globais
-- `assets/hero-bg.jpg`: imagem de fundo (substituir pela tua)
+## 📂 Structure
+- `index.html`: homepage with hero + rows
+- `style.css`: global styles
+- `/assets`: images for hero and project cards
 
 ## 🔀 Branches
-- `feature/hero`: primeira implementação (hero section)
+- `feature/hero`: hero section
+- `feature/rows`: horizontal rows of projects
 
-## ✅ Commits
-Seguir formato Conventional Commits:
-- `feat(hero): adiciona hero full-screen com CTAs`
-- `docs(readme): adiciona instruções iniciais`
+## ✅ Commits (Conventional Commits)
+Examples:
+- `feat(hero): add full-screen hero with CTAs`
+- `feat(rows): create horizontal project carousels`
+- `docs(readme): update progress with rows`

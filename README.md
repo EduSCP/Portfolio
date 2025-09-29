@@ -10,6 +10,7 @@ A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScr
 - Checkpoint 5: Netflix-style hover overlays on project cards
 - Checkpoint 6: About Me section with background, photo, rating, and type
 - Checkpoint 7: Navbar improvements (EduFlix brand, GitHub tab, icons on CTA buttons)
+- Checkpoint 8: Projects organized in multiple rows (Favorites, Recent, First Projects, All Projects) using 3x3 grid
 
 ## 📂 Structure
 - `index.html`: homepage with hero, about, and dynamic rows
@@ -28,10 +29,18 @@ A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScr
 - `feature/project-detail`
 - `feature/hover-overlay`
 - `feature/about-section`
+- `feature/navbar-update`
+- `feature/project-grid`
+
 
 ## ✅ Commits (Conventional Commits)
-- `feat(navbar): add GitHub tab and icons to CTA buttons`
+- `feat(projects): restructure portfolio into multiple rows`
 
 ## 🚀 Deployment
-- Open `index.html` directly in the browser  
-- Navbar should show **EduFlix brand** (home), **GitHub tab**, and **icons** in buttons
+- Open `index.html`
+- Scroll to project rows:
+  - My Favorites
+  - Recent Projects
+  - My First Projects
+  - All Projects
+- Each row shows cards in a **3x3 grid**

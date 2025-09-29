@@ -14,6 +14,12 @@
 </head>
 
 <body>
+  <!-- Intro Loader -->
+  <div id="intro-loader">
+    <span class="intro-letter">E</span>
+    <audio id="intro-sound" src="assets/tudum.mp3"></audio>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
@@ -64,71 +70,71 @@
 
   </section>
 
- <!-- Projects Section -->
-<section id="projects-grid" class="projects-grid-section">
+  <!-- Projects Section -->
+  <section id="projects-grid" class="projects-grid-section">
 
-  <!-- My Favorites -->
-  <h2 class="section-title">My Favorites</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-  <a href="proj3.html">
-    <img src="assets/proj3.jpg" alt="Project 1">
-    <span class="card-title">Project 1</span>
-  </a>
-</div>
-    <div class="project-card">Project 2</div>
-    <div class="project-card">Project 3</div>
-    <div class="project-card">Project 4</div>
-    <div class="project-card">Project 5</div>
-    <div class="project-card">Project 6</div>
-    <div class="project-card">Project 7</div>
-    <div class="project-card">Project 8</div>
-    <div class="project-card">Project 9</div>
-  </div>
+    <!-- My Favorites -->
+    <h2 class="section-title">My Favorites</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <a href="proj3.html">
+          <img src="assets/proj3.jpg" alt="Project 1">
+          <span class="card-title">Project 1</span>
+        </a>
+      </div>
+      <div class="project-card">Project 2</div>
+      <div class="project-card">Project 3</div>
+      <div class="project-card">Project 4</div>
+      <div class="project-card">Project 5</div>
+      <div class="project-card">Project 6</div>
+      <div class="project-card">Project 7</div>
+      <div class="project-card">Project 8</div>
+      <div class="project-card">Project 9</div>
+    </div>
 
-  <!-- Recent Projects -->
-  <h2 class="section-title">Recent Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">Project 10</div>
-    <div class="project-card">Project 11</div>
-    <div class="project-card">Project 12</div>
-    <div class="project-card">Project 13</div>
-    <div class="project-card">Project 14</div>
-    <div class="project-card">Project 15</div>
-    <div class="project-card">Project 16</div>
-    <div class="project-card">Project 17</div>
-    <div class="project-card">Project 18</div>
-  </div>
+    <!-- Recent Projects -->
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">Project 10</div>
+      <div class="project-card">Project 11</div>
+      <div class="project-card">Project 12</div>
+      <div class="project-card">Project 13</div>
+      <div class="project-card">Project 14</div>
+      <div class="project-card">Project 15</div>
+      <div class="project-card">Project 16</div>
+      <div class="project-card">Project 17</div>
+      <div class="project-card">Project 18</div>
+    </div>
 
-  <!-- My First Projects -->
-  <h2 class="section-title">My First Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">Project 19</div>
-    <div class="project-card">Project 20</div>
-    <div class="project-card">Project 21</div>
-    <div class="project-card">Project 22</div>
-    <div class="project-card">Project 23</div>
-    <div class="project-card">Project 24</div>
-    <div class="project-card">Project 25</div>
-    <div class="project-card">Project 26</div>
-    <div class="project-card">Project 27</div>
-  </div>
+    <!-- My First Projects -->
+    <h2 class="section-title">My First Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">Project 19</div>
+      <div class="project-card">Project 20</div>
+      <div class="project-card">Project 21</div>
+      <div class="project-card">Project 22</div>
+      <div class="project-card">Project 23</div>
+      <div class="project-card">Project 24</div>
+      <div class="project-card">Project 25</div>
+      <div class="project-card">Project 26</div>
+      <div class="project-card">Project 27</div>
+    </div>
 
-  <!-- All Projects -->
-  <h2 class="section-title">All Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">Project 28</div>
-    <div class="project-card">Project 29</div>
-    <div class="project-card">Project 30</div>
-    <div class="project-card">Project 31</div>
-    <div class="project-card">Project 32</div>
-    <div class="project-card">Project 33</div>
-    <div class="project-card">Project 34</div>
-    <div class="project-card">Project 35</div>
-    <div class="project-card">Project 36</div>
-  </div>
+    <!-- All Projects -->
+    <h2 class="section-title">All Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">Project 28</div>
+      <div class="project-card">Project 29</div>
+      <div class="project-card">Project 30</div>
+      <div class="project-card">Project 31</div>
+      <div class="project-card">Project 32</div>
+      <div class="project-card">Project 33</div>
+      <div class="project-card">Project 34</div>
+      <div class="project-card">Project 35</div>
+      <div class="project-card">Project 36</div>
+    </div>
 
-</section>
+  </section>
 
 
   <!-- Contact Section -->
@@ -167,6 +173,33 @@
   <!-- Scripts -->
   <script src="projects.js"></script>
   <script src="script.js"></script>
+  <script>
+  window.addEventListener("load", () => {
+    const introLoader = document.getElementById("intro-loader");
+    const introSound = document.getElementById("intro-sound");
+
+    // Check if intro was already shown in this session
+    if (!sessionStorage.getItem("introPlayed")) {
+      // Play intro
+      introSound.play().catch(err => console.log("Autoplay blocked:", err));
+
+      // After 4s, fade out
+      setTimeout(() => {
+        introLoader.classList.add("fade-out");
+        // After fade-out, hide completely
+        setTimeout(() => {
+          introLoader.style.display = "none";
+        }, 1000);
+      }, 4000);
+
+      // Mark intro as played
+      sessionStorage.setItem("introPlayed", "true");
+    } else {
+      // Skip intro instantly
+      introLoader.style.display = "none";
+    }
+  });
+</script>
 </body>
 
 </html>

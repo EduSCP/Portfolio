@@ -12,11 +12,12 @@ A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScr
 - Checkpoint 7: Navbar improvements (EduFlix brand, GitHub tab, icons on CTA buttons)
 - Checkpoint 8: Projects organized in multiple rows (Favorites, Recent, First Projects, All Projects) using 3x3 grid
 - Checkpoint 9: Netflix-style intro animation with sound + smooth fade-out
+- Checkpoint 10: Dedicated `about.html` page with academic and professional details and CV buttons (View and Download) added
 
 ## 📂 Structure
-- `index.html`
-- `style.css` (intro overlay and animations)
-- `/assets`: audio file for Netflix-style intro
+- `about.html`: includes CV section with buttons
+- `style.css`
+- `/assets`: Europass CV (PDF)
 
 ## 🔀 Branches
 - `feature/hero`
@@ -28,12 +29,15 @@ A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScr
 - `feature/navbar-update`
 - `feature/project-grid`
 - `feature/intro-animation`
+- `feature/about-page`
 
 
 ## ✅ Commits (Conventional Commits)
-- `feat(intro): add Netflix-style intro animation with sound`
+- `feat(about-page): create detailed about.html with academic/pro path`
 
 ## 🚀 Deployment
-- Reload site
-- Intro screen plays with **big E logo and sound**
-- After ~4s, smooth fade-out reveals homepage
+- Open `about.html`
+- Shows detailed bio, academic path, and professional experience
+- Two buttons available:
+  - **View CV** → opens Europass CV in new tab
+  - **Download CV** → downloads file directly (via JavaScript)

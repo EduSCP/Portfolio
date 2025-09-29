@@ -42,29 +42,29 @@
           <img src="assets/me.png" alt="Photo of Edu">
         </div>
 
-        <!-- Text content -->
+         <!-- Text content -->
         <div class="about-text">
-          <h2>Hello, I'm Edu 👋</h2>
+          <h2>Welcome, I'm Eduardo</h2>
+          <!-- Extra details like Netflix -->
+          <div class="about-meta">
+            <span class="rating">⭐ 4.8/5</span>
+            <span class="type">🎬 Developer | Portfolio</span>
+          </div>
           <p>
             A web developer passionate about creating immersive and dynamic digital
             experiences. I work mainly with HTML, CSS, and JavaScript, and I enjoy
             transforming ideas into clean, functional websites.
           </p>
 
-          <!-- Extra details like Netflix -->
-          <div class="about-meta">
-            <span class="rating">⭐ 4.8/5</span>
-            <span class="type">🎬 Developer | Portfolio</span>
-          </div>
-
           <!-- Buttons with icons -->
           <div class="about-buttons">
             <a href="#projects-grid" class="btn btn-primary">
               <i class="bi bi-play-fill"></i> Start Watching
             </a>
-            <a href="#contact" class="btn btn-secondary">
+            <a href="about.html" class="btn btn-secondary">
               <i class="bi bi-info-circle"></i> More Info
             </a>
+
           </div>
         </div>
 
@@ -84,12 +84,6 @@
       </div>
       <div class="project-card">Project 2</div>
       <div class="project-card">Project 3</div>
-      <div class="project-card">Project 4</div>
-      <div class="project-card">Project 5</div>
-      <div class="project-card">Project 6</div>
-      <div class="project-card">Project 7</div>
-      <div class="project-card">Project 8</div>
-      <div class="project-card">Project 9</div>
     </div>
 
     <!-- Recent Projects -->
@@ -98,12 +92,6 @@
       <div class="project-card">Project 10</div>
       <div class="project-card">Project 11</div>
       <div class="project-card">Project 12</div>
-      <div class="project-card">Project 13</div>
-      <div class="project-card">Project 14</div>
-      <div class="project-card">Project 15</div>
-      <div class="project-card">Project 16</div>
-      <div class="project-card">Project 17</div>
-      <div class="project-card">Project 18</div>
     </div>
 
     <!-- My First Projects -->
@@ -112,12 +100,6 @@
       <div class="project-card">Project 19</div>
       <div class="project-card">Project 20</div>
       <div class="project-card">Project 21</div>
-      <div class="project-card">Project 22</div>
-      <div class="project-card">Project 23</div>
-      <div class="project-card">Project 24</div>
-      <div class="project-card">Project 25</div>
-      <div class="project-card">Project 26</div>
-      <div class="project-card">Project 27</div>
     </div>
 
     <!-- All Projects -->
@@ -174,32 +156,32 @@
   <script src="projects.js"></script>
   <script src="script.js"></script>
   <script>
-  window.addEventListener("load", () => {
-    const introLoader = document.getElementById("intro-loader");
-    const introSound = document.getElementById("intro-sound");
+    window.addEventListener("load", () => {
+      const introLoader = document.getElementById("intro-loader");
+      const introSound = document.getElementById("intro-sound");
 
-    // Check if intro was already shown in this session
-    if (!sessionStorage.getItem("introPlayed")) {
-      // Play intro
-      introSound.play().catch(err => console.log("Autoplay blocked:", err));
+      // Check if intro was already shown in this session
+      if (!sessionStorage.getItem("introPlayed")) {
+        // Play intro
+        introSound.play().catch(err => console.log("Autoplay blocked:", err));
 
-      // After 4s, fade out
-      setTimeout(() => {
-        introLoader.classList.add("fade-out");
-        // After fade-out, hide completely
+        // After 4s, fade out
         setTimeout(() => {
-          introLoader.style.display = "none";
-        }, 1000);
-      }, 4000);
+          introLoader.classList.add("fade-out");
+          // After fade-out, hide completely
+          setTimeout(() => {
+            introLoader.style.display = "none";
+          }, 1000);
+        }, 4000);
 
-      // Mark intro as played
-      sessionStorage.setItem("introPlayed", "true");
-    } else {
-      // Skip intro instantly
-      introLoader.style.display = "none";
-    }
-  });
-</script>
+        // Mark intro as played
+        sessionStorage.setItem("introPlayed", "true");
+      } else {
+        // Skip intro instantly
+        introLoader.style.display = "none";
+      }
+    });
+  </script>
 </body>
 
 </html>

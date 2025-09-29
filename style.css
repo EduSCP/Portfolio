@@ -72,22 +72,55 @@ body {
 .row-cards::-webkit-scrollbar {
   display: none;
 }
+/* Card styling with overlay */
 .card {
+  position: relative;
   flex: 0 0 200px;
   background: #111;
   border-radius: 6px;
   overflow: hidden;
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card img {
   width: 100%;
   height: 120px;
   object-fit: cover;
+  display: block;
 }
-.card h3 {
+.card:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+/* Overlay hidden by default */
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 10px;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card .overlay h3 {
+  margin-bottom: 8px;
   font-size: 1rem;
 }
+.card .overlay p {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+.card .overlay .btn {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+

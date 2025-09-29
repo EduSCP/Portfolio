@@ -20,3 +20,18 @@ projects.forEach(project => {
     }
   });
 });
+// Scroll reveal for about & project rows
+function revealOnScroll() {
+  const sections = document.querySelectorAll('.about-section, .row');
+  const windowHeight = window.innerHeight;
+  sections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < windowHeight - 100) {
+      sec.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+

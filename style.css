@@ -123,4 +123,181 @@ body {
   font-size: 0.8rem;
   padding: 6px 12px;
 }
+/* ---------------- */
+/* Netflix Nav Bar  */
+/* ---------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 10%, transparent 100%);
+  z-index: 1000;
+}
 
+.logo {
+  color: #e50914;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.nav-links a:hover {
+  color: #b3b3b3;
+}
+
+.nav-actions .profile {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Push content below navbar */
+.hero {
+  margin-top: 60px;
+}
+
+/* ---------------- */
+/* Global Body Fix  */
+/* ---------------- */
+body {
+  background: #141414;
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+/* ---------------- */
+/* Row & Titles     */
+/* ---------------- */
+.row h2 {
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ---------------- */
+/* Card Styling     */
+/* ---------------- */
+.row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 0 40px 20px;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 300px; /* widescreen look */
+  aspect-ratio: 16 / 9;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+/* ---------------- */
+/* Overlay Effect   */
+/* ---------------- */
+.card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  opacity: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: opacity 0.3s ease;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card .overlay h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+.card .overlay p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+.card .overlay .btn {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  background: #e50914;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+}
+.card .overlay .btn:hover {
+  background: #f40612;
+}
+/* About Me Section */
+.about-section {
+  padding: 60px 40px;
+  background: #1a1a1a;
+  color: #ddd;
+}
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.about-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e50914;
+}
+.about-text {
+  flex: 1;
+}
+.about-text h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #ccc;
+}
+.about-section, .row {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.about-section.visible, .row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

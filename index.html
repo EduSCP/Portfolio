@@ -3,10 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edu's Show</title>
+  <title>EduFlix</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">EduFlix</div>
+    <nav class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="profile">Profile</a>
+    </div>
+  </header>
+
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
@@ -19,6 +35,20 @@
     </div>
   </header>
 
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-photo">
+        <img src="assets/me.jpg" alt="Photo of Edu">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello! I'm Edu — a web developer passionate about creating immersive experiences. I specialize in HTML, CSS, and JavaScript, and I love bringing projects to life with clean design and smooth interactions.</p>
+        <p>When I'm not coding, I enjoy designing, exploring new web technologies, and working on fun side projects.</p>
+      </div>
+    </div>
+  </section>
+  
   <!-- Project Rows -->
   <main id="projects">
     <section class="row">
@@ -46,4 +76,5 @@
   <script src="projects.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

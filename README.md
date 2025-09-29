@@ -7,13 +7,14 @@ A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScr
 - Checkpoint 2: Added horizontal rows of project cards
 - Checkpoint 3: Projects rendered dynamically with JavaScript (`projects.js`)
 - Checkpoint 4: Added project detail page (`project.html` + `project.js`)
+- Checkpoint 5: Netflix-style hover overlays on project cards
 
 ## 📂 Structure
 - `index.html`: homepage with hero + dynamic rows
 - `project.html`: individual project page
 - `style.css`: global styles
-- `projects.js`: data file with all project info
-- `script.js`: renders cards dynamically
+- `projects.js`: project data file
+- `script.js`: renders cards dynamically with overlays
 - `project.js`: renders details dynamically
 - `/assets`: images for hero and projects
 
@@ -22,10 +23,10 @@ A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScr
 - `feature/rows`
 - `feature/dynamic-projects`
 - `feature/project-detail`
+- `feature/hover-overlay`
 
 ## ✅ Commits (Conventional Commits)
 Examples:
-- `feat(detail): add project.html template`
-- `feat(project-data): extend projects.js with detail fields`
-- `feat(render-detail): load project detail dynamically`
-- `docs(readme): update with checkpoint 4`
+- `feat(overlay): add Netflix-style hover effect to cards`
+- `feat(project-data): add short description for overlay preview`
+- `docs(readme): document checkpoint 5`

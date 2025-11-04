@@ -1,43 +1,122 @@
-# EduFlix — Portfolio
+# 🎬 EduFlix — Portfolio Website
 
-A portfolio inspired by the Netflix UI, built only with **HTML, CSS, and JavaScript**.
+**EduFlix** is a personal portfolio inspired by the Netflix UI, built entirely with **HTML, CSS, and JavaScript**.  
+The project aims to present my academic and professional journey as well as showcase my web development projects in a cinematic and dynamic layout.
 
-## 🚀 Current Status
-- Checkpoint 1: Hero section with title, subtitle, and CTA buttons
-- Checkpoint 2: Added horizontal rows of project cards
-- Checkpoint 3: Projects rendered dynamically with JavaScript (`projects.js`)
-- Checkpoint 4: Added project detail page (`project.html` + `project.js`)
-- Checkpoint 5: Netflix-style hover overlays on project cards
-- Checkpoint 6: About Me section with background, photo, rating, and type
-- Checkpoint 7: Navbar improvements (EduFlix brand, GitHub tab, icons on CTA buttons)
-- Checkpoint 8: Projects organized in multiple rows (Favorites, Recent, First Projects, All Projects) using 3x3 grid
-- Checkpoint 9: Netflix-style intro animation with sound + smooth fade-out
-- Checkpoint 10: Dedicated `about.html` page with academic and professional details and CV buttons (View and Download) added
+---
 
-## 📂 Structure
-- `about.html`: includes CV section with buttons
-- `style.css`
-- `/assets`: Europass CV (PDF)
+## 🚀 Features
 
-## 🔀 Branches
-- `feature/hero`
-- `feature/rows`
-- `feature/dynamic-projects`
-- `feature/project-detail`
-- `feature/hover-overlay`
-- `feature/about-section`
-- `feature/navbar-update`
-- `feature/project-grid`
-- `feature/intro-animation`
-- `feature/about-page`
+- Netflix-inspired dark UI  
+- Intro animation with sound (“E” logo and fade transition)  
+- Hero section with profile and CTA buttons  
+- Dynamic project grids (3x3) organized by category:
+  - My Favorites  
+  - My First Projects  
+  - Recent Projects  
+  - All Projects  
+- “About Me” page featuring:
+  - Animated image carousel (reel effect)  
+  - Personal description  
+  - Academic & Professional timeline  
+  - Embedded YouTube video  
+  - View & Download CV buttons  
+- Contact section with Google Maps integration  
+- “Back to Top” floating button with smooth scroll  
+- Fully responsive design (mobile & desktop)
+
+---
+
+## 🧰 Technologies Used
+
+| Area | Technology |
+|------|-------------|
+| Structure | HTML5 |
+| Styling | CSS3 |
+| Interactivity | JavaScript |
+| Icons | Bootstrap Icons |
+| Fonts | Google Fonts (Roboto) |
+| Media | YouTube Embed, Google Maps Embed |
+
+---
+
+## 📂 Project Structure
+
+```bash
+Portfolio/
+│
+├── index.html # Main page (portfolio showcase)
+├── about.html # About Me page (journey + CV)
+├── style.css # Global styles
+├── script.js # Scroll animations, intro loader, etc.
+│
+├── /assets
+│ ├── hero-bg.jpg
+│ ├── about-bg.png
+│ ├── me.png
+│ ├── tudum.mp3
+│ ├── proj1.jpg ... projN.jpg
+│ ├── E.ico
+│ └── Eduardo_Pires_CV_Europass.pdf
+│
+└── README.md
+```
+
+---
+
+## 🖥️ How to Run Locally
+
+### 1️⃣ Prerequisites
+Make sure you have:
+- A computer with a modern web browser (Google Chrome, Edge, Firefox, Safari)
+- [Git](https://git-scm.com/) installed (optional)
+- A code editor like **VS Code** (recommended)
+
+### 2️⃣ Clone the Repository
+If the project is on GitHub:
+
+```bash
+git clone https://github.com/EduSCP/Eduardo_Pires_Projeto_TPSI0525.git
+
+```
+
+Or download it as a .zip and extract it manually.
+
+### 3️⃣ Open the Project
+
+Open the project folder in VS Code or your preferred editor.
+
+### 4️⃣ Run the Website
+
+You can open the index.html file directly in your browser:
+
+Double-click on index.html, or
+
+In VS Code, right-click → “Open with Live Server” (recommended for smoother navigation between pages).
+
+### 5️⃣ Navigate the Portfolio
+
+The homepage features your hero section and project showcase.
+
+Click “More Info” to access the About Me page with your timeline and CV.
+
+Scroll to the Contacts section for LinkedIn, WhatsApp, and Google Maps.
 
 
-## ✅ Commits (Conventional Commits)
-- `feat(about-page): create detailed about.html with academic/pro path`
+---
 
-## 🚀 Deployment
-- Open `about.html`
-- Shows detailed bio, academic path, and professional experience
-- Two buttons available:
-  - **View CV** → opens Europass CV in new tab
-  - **Download CV** → downloads file directly (via JavaScript)
+👤 Author
+
+Eduardo Pires
+
+In Progress Developer | Barreiro, Portugal
+
+📧 eduardoalexandre.pires96@gmail.com
+
+
+🏁 Status
+
+
+✅ Final Version:
+
+All features implemented, portfolio deployed on GitHub Pages.
